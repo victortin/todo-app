@@ -1,0 +1,16 @@
+<section class="upload-page">
+  <h1>上傳檔案示範</h1>
+  <app-upload (upload)="handleUpload($event)"></app-upload>
+
+  <div *ngIf="uploading()" class="uploading-message">
+    正在上傳，請稍候…
+  </div>
+
+  <div *ngIf="errorMessage()" class="error-message">
+    {{ errorMessage() }}
+  </div>
+
+  <div *ngIf="uploadedMessage()" class="uploaded-message">
+    {{ uploadedMessage() }}
+  </div>
+</section>

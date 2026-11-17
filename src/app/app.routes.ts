@@ -1,3 +1,9 @@
 import { Routes } from '@angular/router';
+import { TodoPage } from './todo-page/todo-page';
+export const routes: Routes = [
+        {
+            path: '',
+            component: TodoPage
+        }
 
-export const routes: Routes = [];
+];
