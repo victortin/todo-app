@@ -1,0 +1,33 @@
+<div class="upload-card">
+  <div
+    class="upload-dropzone"
+    (drop)="onDrop($event)"
+    (dragover)="onDragOver($event)">
+    <label for="fileInput">
+      <input id="fileInput" type="file" (change)="onFileSelected($event)" />
+      <div class="drop-text">
+        <strong>拖放檔案</strong> 或 <span class="link">點選選擇</span>
+      </div>
+      <div class="hint">支援單一檔案上傳，圖片會顯示預覽</div>
+    </label>
+  </div>
+
+  <div *ngIf="errorMessage()" class="error">{{ errorMessage() }}</div>
+
+  <div *ngIf="selectedFile()" class="file-info">
+    <div>
+      <div class="meta-title">已選檔案</div>
+      <div>{{ selectedFile()?.name }}</div>
+      <div>{{ (selectedFile()?.size ?? 0) / 1024 | number:'1.0-1' }} KB</div>
+    </div>
+
+    <div class="actions">
+      <button type="button" (click)="onUpload()">上傳</button>
+      <button type="button" class="secondary" (click)="clearSelection()">移除</button>
+    </div>
+  </div>
+
+  <div *ngIf="previewUrl()" class="preview">
+    <img [src]="previewUrl()" alt="檔案預覽" />
+  </div>
+</div>

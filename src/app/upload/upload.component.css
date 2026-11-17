@@ -1,0 +1,93 @@
+.upload-card {
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 520px;
+  background: #ffffff;
+}
+
+.upload-dropzone {
+  display: block;
+  padding: 28px 16px;
+  border: 2px dashed #afb5c0;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  background: #f7f9fc;
+}
+
+.upload-dropzone:hover {
+  border-color: #6e8efb;
+}
+
+.upload-dropzone input {
+  display: none;
+}
+
+.drop-text {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.link {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.hint {
+  color: #6f7380;
+  font-size: 0.9rem;
+}
+
+.error {
+  margin-top: 12px;
+  color: #c62828;
+  font-weight: 600;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 12px;
+  background: #f2f5fa;
+  border-radius: 10px;
+}
+
+.meta-title {
+  font-size: 0.9rem;
+  color: #4f5d6e;
+  margin-bottom: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #6c757d;
+}
+
+.preview {
+  margin-top: 18px;
+}
+
+.preview img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
